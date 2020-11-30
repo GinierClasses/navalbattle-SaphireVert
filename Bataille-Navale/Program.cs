@@ -34,12 +34,12 @@ namespace Bataille_Navale
             }
             afficherCases();
 
-
+            /*
             Grille grille1 = new Grille();
             Console.WriteLine(grille1.GetCase(7, 5).x);
             Console.WriteLine(grille1.GetCase(7, 5).y);
             //Console.WriteLine(grille1.GetCase(7, 5).navire.name);
-
+            */
 
 
         }

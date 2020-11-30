@@ -33,7 +33,7 @@ namespace Bataille_Navale.controlleurs
             {
                 for (int j = 0; j <= (cordY_fin - cordY_dep); j++)
                 {
-                    casesNav.Add(userGrille.GetCase(i, j));
+                    casesNav.Add(user1Grille.GetCase(i, j));
                 }
             }
             Navire navire = new Navire(nomNavire, casesNav);
