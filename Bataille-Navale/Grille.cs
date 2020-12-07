@@ -9,25 +9,17 @@ namespace Bataille_Navale
     class Grille
     {
 
-        //public List<Case> Cases { get; set; }
-        List<Case> Case1 = new List<Case>();
-        public Grille(int hauteurGr, int largeurGr)
+        public Coordonnée CordMax;
+        public List<ModelNavire> NaviresGrille = new List<ModelNavire>(); 
+
+        public Grille(Coordonnée cordMax)
         {
-            
-            for(int i = 0; i < hauteurGr; i++)
-            {
-                for (int j = 0; j < largeurGr; j++)
-                {
-                    Case1.Add(new Case() { x = i, y = j });
-                }
-            }
+            this.CordMax = cordMax;
         }
 
         public Case GetCase(int x, int y)
         {
-            
-            return Case1.First(c => c.x == x && c.y == y);
-            
+            return Case1.First(c => c.x == x && c.y == y);   
         }
     }
 

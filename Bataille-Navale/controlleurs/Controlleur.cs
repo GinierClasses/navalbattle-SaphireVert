@@ -12,11 +12,19 @@ namespace Bataille_Navale.controlleurs
         Grille user1Grille;
         Grille user2Grille;
 
-        public Grille creationGrille(int hauteurGr, int largeurGr, bool player1)
+        public Controlleur() { }
+
+        public void test()
         {
-            if (player1)
+            Grille testGrille = creationGrille(10, 10, true);
+        }
+
+        public void creationGrille(int hauteurGr, int largeurGr, bool is_Player)
+        {
+            if (is_Player)
             {
-                return user1Grille = new Grille(hauteurGr, largeurGr);
+
+                 Grille grille = new Grille(new Coordonnée(hauteurGr, largeurGr));
             }
             else
             {
@@ -24,20 +32,36 @@ namespace Bataille_Navale.controlleurs
             }
             //Grille userGrille = new Grille();
         }
-
-        public Navire creationNavire(string nomNavire, int cordX_dep, int cordY_dep, int cordX_fin, int cordY_fin)
+        
+        public Grille creationGrilleOrdi()
         {
-            
-            List<Case> casesNav = new List<Case>();
-            for(int i = 0; i <= (cordX_fin-cordX_dep); i++)
-            {
-                for (int j = 0; j <= (cordY_fin - cordY_dep); j++)
-                {
-                    casesNav.Add(user1Grille.GetCase(i, j));
-                }
-            }
-            Navire navire = new Navire(nomNavire, casesNav);
+            Grille foo = new Grille(10,10);
+            return foo;
+        }
+
+        public casesNavire validationNavires(string nomNavire, Grille grille, int cordX_dep, int cordY_dep, int cordX_fin, int cordY_fin)
+        {   
+
+            casesNavire navire = new casesNavire(nomNavire, grille, cordX_dep, cordX_fin, cordY_dep, cordY_fin);
             return navire;
         }
+
+        public List<ModelNavire> creationListeNavires()
+        {
+            List<ModelNavire> cases = new List<ModelNavire>();
+            ModelNavire porteAvion = new ModelNavire("Porte-avions", 5);
+            cases.Add(porteAvion);
+            ModelNavire croiseur = new ModelNavire("Croiseur", 4);
+            cases.Add(croiseur);
+            ModelNavire contreTorpilleur = new ModelNavire("Contre-torpilleurs", 3);
+            cases.Add(contreTorpilleur);
+            ModelNavire contreTorpilleur2 = new ModelNavire("Contre-torpilleurs", 3);
+            cases.Add(contreTorpilleur2);
+            ModelNavire torpilleur = new ModelNavire("Torpilleur", 2);
+            cases.Add(torpilleur);
+
+            return cases;
+        }
+
     }
 }
