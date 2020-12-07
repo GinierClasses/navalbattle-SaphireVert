@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="controlleurs\Controlleur.cs" />
+    <Compile Include="Coordonnée.cs" />
     <Compile Include="Grille.cs" />
-    <Compile Include="Navire.cs" />
+    <Compile Include="ModelNavire.cs" />
+    <Compile Include="casesNavire.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
