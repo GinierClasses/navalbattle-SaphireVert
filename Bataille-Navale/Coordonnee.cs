@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bataille_Navale
 {
-    class Coordonnée
+    public class Coordonnee
     {
         public int x { get; set; }
         public int y { get; set; }
-        Coordonnée(int x, int y)
+        public Coordonnee(int x, int y)
         {
             this.x = x;
             this.y = y;
@@ -19,7 +19,7 @@ namespace Bataille_Navale
         public override bool Equals(object obj)
         {
 
-            Coordonnée coordonnée = (Coordonnée)obj;
+            Coordonnee coordonnée = (Coordonnee)obj;
             return coordonnée.x == this.x && coordonnée.y == this.y;
         }
     }

@@ -19,30 +19,38 @@ namespace Bataille_Navale.controlleurs
             Grille testGrille = creationGrille(10, 10, true);
         }
 
-        public void creationGrille(int hauteurGr, int largeurGr, bool is_Player)
+        public Grille creationGrille(int hauteurGr, int largeurGr, bool is_Player)
         {
             if (is_Player)
             {
 
-                 Grille grille = new Grille(new Coordonnée(hauteurGr, largeurGr));
+                return user1Grille = new Grille(new Coordonnee(hauteurGr, largeurGr));
             }
             else
             {
-                return user2Grille = new Grille(hauteurGr, largeurGr);
+                return user2Grille = new Grille(new Coordonnee(hauteurGr, largeurGr));
             }
             //Grille userGrille = new Grille();
         }
         
         public Grille creationGrilleOrdi()
         {
-            Grille foo = new Grille(10,10);
+            Grille foo = new Grille(new Coordonnee(10, 10));
             return foo;
         }
 
-        public casesNavire validationNavires(string nomNavire, Grille grille, int cordX_dep, int cordY_dep, int cordX_fin, int cordY_fin)
-        {   
+        public Coordonnee PlacementNavire(List<ModelNavire> modelNavire)
+        {
+            modelNavire = creationListeNavires();
+            if ()
+            {
+                user1Grille.NaviresGrille.Add(modelNavire);
+            }
+        }
 
-            casesNavire navire = new casesNavire(nomNavire, grille, cordX_dep, cordX_fin, cordY_dep, cordY_fin);
+        public casesNavire validationNavires(int taille, char direction, string position)
+        {   
+            casesNavire navire = new casesNavire(taille, direction, position);
             return navire;
         }
 

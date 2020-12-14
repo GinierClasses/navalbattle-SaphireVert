@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="controlleurs\Controlleur.cs" />
-    <Compile Include="Coordonnée.cs" />
+    <Compile Include="Coordonnee.cs" />
     <Compile Include="Grille.cs" />
     <Compile Include="ModelNavire.cs" />
     <Compile Include="casesNavire.cs" />

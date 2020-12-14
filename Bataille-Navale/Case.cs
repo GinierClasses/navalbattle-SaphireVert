@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bataille_Navale
 {
-    class Case
+    public class Case
     {
-        public Coordonnée position;
+        public Coordonnee position;
         public bool touched;
         public bool occupé;
         //public Navire navire = new Navire("toto", 5, 'V', );
